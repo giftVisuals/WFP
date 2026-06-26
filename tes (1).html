@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YM1FSSMZZD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YM1FSSMZZD');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winsome Film Pro | Crafting Stories That Inspire The World</title>
+    <meta name="description" content="Premium Film Production, Documentary Creation, Commercial Advertising and Streaming Platform Readiness Services. Crafting Stories That Inspire The World.">
+    <meta property="og:title" content="Winsome Film Pro | Crafting Stories That Inspire The World">
+    <meta property="og:description" content="Premium Film Production, Documentary Creation, Commercial Advertising and Streaming Platform Readiness Services.">
+    <meta property="og:image" content="https://i.postimg.cc/jj7xKwFs/IMG-20260619-WA0083.jpg">
+    <meta property="og:url" content="https://winsomefilmpro.online">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Winsome Film Pro">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Winsome Film Pro | Crafting Stories That Inspire The World">
+    <meta name="twitter:description" content="Premium Film Production, Documentary Creation, Commercial Advertising and Streaming Platform Readiness Services.">
+    <meta name="twitter:image" content="https://i.postimg.cc/jj7xKwFs/IMG-20260619-WA0083.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --luxury-gold: #FFD700;
+            --soft-gold: #F4E2A1;
+            --white: #FFFFFF;
+            --off-white: #FAF8F3;
+            --text-dark: #111111;
+            --text-medium: #333333;
+            --text-light: #666666;
+            --glass-white: rgba(255, 255, 255, 0.2);
+            --glass-white-strong: rgba(255, 255, 255, 0.35);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-border-light: rgba(255, 255, 255, 0.25);
+            --gold-glow: rgba(212, 175, 55, 0.3);
+            --gold-glow-strong: rgba(212, 175, 55, 0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        #particle-canvas {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 0;
+        }
+
+        .navbar {
+            position: fixed; top: 16px; left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px); max-width: 1260px;
+            z-index: 1000;
+            padding: 10px 28px;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 60px;
+            box-shadow: 0 4px 30px rgba(212, 175, 55, 0.1), 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 60px;
+            box-shadow: 0 8px 40px rgba(212, 175, 55, 0.15), 0 2px 12px rgba(0,0,0,0.08);
+            top: 12px;
+            padding: 8px 28px;
+        }
+        .navbar.scrolled .nav-logo img { height: 64px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; }
+        .nav-logo img { height: 72px; transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .nav-logo span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; font-weight: 700;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #B8960C 0%, #D4AF37 25%, #FFD700 45%, #FFF8DC 55%, #FFD700 70%, #D4AF37 85%, #B8960C 100%);
+            background-size: 250% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: navGoldShimmer 3.5s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(212,175,55,0.55));
+        }
+        @keyframes navGoldShimmer {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+        .nav-links { display: flex; gap: 35px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-dark);
+            font-size: 0.88rem; font-weight: 500;
+            letter-spacing: 0.5px; position: relative;
+            padding: 8px 0; transition: color 0.3s ease;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: 0; left: 50%;
+            width: 0; height: 2px; background: var(--primary-gold);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateX(-50%);
+        }
+        .nav-links a:hover { color: var(--primary-gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-menu-btn span { display: block; width: 25px; height: 2px; background: var(--text-dark); margin: 6px 0; transition: all 0.3s ease; }
+
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            background: linear-gradient(135deg, #FAF8F3 0%, #FFF9E6 30%, #FFF5D6 50%, #FAF8F3 70%, #F0EBE0 100%);
+        }
+        .hero-bg-film {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(ellipse at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(212,175,55,0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse at 50% 50%, rgba(255,215,0,0.03) 0%, transparent 60%);
+            z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1100px; padding: 100px 40px 0; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 10px 24px; background: var(--glass-white-strong);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); border-radius: 50px;
+            font-size: 0.82rem; font-weight: 500; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--primary-gold); margin-bottom: 40px;
+            opacity: 0; transform: translateY(30px);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+        .hero-badge .dot { width: 6px; height: 6px; background: var(--primary-gold); border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.5); } }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 5rem); line-height: 1.1; font-weight: 700;
+            color: var(--text-dark); margin-bottom: 30px; letter-spacing: -1px;
+            opacity: 0; transform: translateY(40px);
+            animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+        }
+        .hero h1 .gold-text { color: var(--primary-gold); position: relative; display: inline-block; }
+        .hero h1 .gold-text::after {
+            content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 8px;
+            background: linear-gradient(90deg, transparent, var(--soft-gold), transparent);
+            opacity: 0.4; z-index: -1;
+        }
+        .hero-subtitle {
+            font-size: clamp(1rem, 1.8vw, 1.25rem); color: var(--text-medium);
+            line-height: 1.8; max-width: 750px; margin: 0 auto 50px; font-weight: 400;
+            opacity: 0; transform: translateY(30px);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+        }
+        .hero-buttons {
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            opacity: 0; transform: translateY(30px);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px;
+            text-decoration: none; cursor: pointer; border: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; overflow: hidden;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-gold), #B8960C);
+            color: var(--white); box-shadow: 0 10px 40px rgba(212,175,55,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 50px rgba(212,175,55,0.4); }
+        .btn-glass {
+            background: var(--glass-white-strong); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border);
+            color: var(--text-dark);
+        }
+        .btn-glass:hover { background: var(--glass-white); border-color: var(--primary-gold); transform: translateY(-3px); }
+        .hero-stats {
+            display: flex; justify-content: center; gap: 40px; margin-top: 70px; flex-wrap: wrap;
+            opacity: 0; transform: translateY(30px);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s forwards;
+        }
+        .stat-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 25px 35px; text-align: center;
+            min-width: 180px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stat-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(212,175,55,0.15); border-color: var(--primary-gold);
+        }
+        .stat-card .stat-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .stat-card .stat-number { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--primary-gold); margin-bottom: 5px; }
+        .stat-card .stat-label { font-size: 0.82rem; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; }
+
+        .light-streak { position: absolute; width: 2px; background: linear-gradient(180deg, transparent, var(--primary-gold), transparent); opacity: 0.15; z-index: 1; }
+        .light-streak-1 { height: 300px; top: 10%; left: 15%; animation: streakMove 8s ease-in-out infinite; }
+        .light-streak-2 { height: 200px; top: 40%; right: 20%; animation: streakMove 10s ease-in-out infinite 2s; }
+        .light-streak-3 { height: 250px; bottom: 20%; left: 60%; animation: streakMove 7s ease-in-out infinite 1s; }
+        @keyframes streakMove { 0%,100% { transform: translateY(0) rotate(5deg); opacity: 0.1; } 50% { transform: translateY(-30px) rotate(5deg); opacity: 0.25; } }
+
+        .floating-glass { position: absolute; background: var(--glass-white); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; z-index: 1; animation: float 6s ease-in-out infinite; }
+        .floating-glass-1 { width: 120px; height: 120px; top: 20%; right: 10%; animation-delay: 0s; }
+        .floating-glass-2 { width: 80px; height: 80px; bottom: 25%; left: 8%; animation-delay: 2s; border-radius: 50%; }
+        .floating-glass-3 { width: 60px; height: 60px; top: 60%; right: 25%; animation-delay: 4s; border-radius: 16px; }
+        @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(3deg); } }
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* ===== FOUNDER HERO ===== */
+        .founder-hero {
+            position: relative; width: 100%; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; background: #0a0a0a;
+        }
+        #liquid-chrome-canvas {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .founder-hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);
+            z-index: 1;
+        }
+        .founder-hero-content {
+            position: relative; z-index: 2;
+            display: flex; flex-direction: column; align-items: center;
+            text-align: center; padding: 120px 24px 60px;
+        }
+        .founder-hero-img-wrap {
+            width: 180px; height: 180px; border-radius: 50%;
+            overflow: hidden; border: 3px solid rgba(212,175,55,0.6);
+            box-shadow: 0 0 60px rgba(212,175,55,0.3), 0 0 0 8px rgba(212,175,55,0.08);
+            margin-bottom: 30px;
+            animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+        }
+        .founder-hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .founder-hero-name {
+            font-family: 'Roboto Flex', 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            color: #fff; line-height: 1.1; margin-bottom: 12px;
+            animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) 0.6s both;
+            cursor: default;
+        }
+        .founder-hero-role {
+            font-size: 1rem; font-weight: 500; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--primary-gold);
+            margin-bottom: 18px;
+            animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.8s both;
+        }
+        .founder-hero-tagline {
+            font-size: 1.1rem; color: rgba(255,255,255,0.75);
+            max-width: 500px; line-height: 1.7;
+            animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) 1s both;
+        }
+        .founder-hero-scroll {
+            margin-top: 50px;
+            animation: fadeUp 1s cubic-bezier(0.16,1,0.3,1) 1.2s both;
+        }
+        .founder-hero-scroll a {
+            display: inline-flex; align-items: center; gap: 10px;
+            color: var(--primary-gold); text-decoration: none;
+            font-size: 0.85rem; font-weight: 600; letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        @keyframes bounceDown { 0%,100%{transform:translateY(0)}50%{transform:translateY(6px)} }
+        .founder-hero-scroll svg { animation: bounceDown 1.5s ease-in-out infinite; }
+
+        section { position: relative; z-index: 1; }
+        .section-container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+        .section-header { text-align: center; margin-bottom: 70px; }
+        .section-label {
+            display: inline-block; font-size: 0.78rem; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase; color: var(--primary-gold);
+            margin-bottom: 20px; position: relative;
+        }
+        .section-label::before, .section-label::after {
+            content: ''; position: absolute; top: 50%; width: 40px; height: 1px;
+        }
+        .section-label::before { right: calc(100% + 15px); background: linear-gradient(90deg, transparent, var(--primary-gold)); }
+        .section-label::after { left: calc(100% + 15px); background: linear-gradient(90deg, var(--primary-gold), transparent); }
+        .section-title { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; color: var(--text-dark); margin-bottom: 20px; font-weight: 700; }
+        .section-subtitle { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; max-width: 700px; margin: 0 auto; }
+
+        .about { padding: 140px 0; background: var(--white); position: relative; overflow: hidden; }
+        .about::before {
+            content: ''; position: absolute; top: -100px; right: -100px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%); border-radius: 50%;
+        }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-text h3 { font-size: 2rem; margin-bottom: 25px; color: var(--text-dark); }
+        .about-text p { font-size: 1.05rem; line-height: 1.9; color: var(--text-medium); margin-bottom: 20px; }
+        .about-image { position: relative; }
+        .about-image img { width: 100%; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.1); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .about-image:hover img { transform: scale(1.02); box-shadow: 0 40px 100px rgba(0,0,0,0.15); }
+        .about-image .glass-overlay {
+            position: absolute; bottom: -20px; left: -20px;
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 25px 30px; max-width: 280px;
+        }
+        .about-image .glass-overlay h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--primary-gold); }
+        .about-image .glass-overlay p { font-size: 0.9rem; color: var(--text-medium); line-height: 1.5; }
+
+        .about-story-blocks { margin-top: 100px; }
+        .story-block { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 100px; }
+        .story-block:nth-child(even) .story-image { order: 2; }
+        .story-block:nth-child(even) .story-text { order: 1; }
+        .story-image { position: relative; }
+        .story-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .story-image:hover img { transform: scale(1.03); }
+        .story-text h4 { font-size: 1.6rem; margin-bottom: 20px; color: var(--text-dark); }
+        .story-text p { font-size: 1rem; line-height: 1.9; color: var(--text-medium); margin-bottom: 15px; }
+        .story-number {
+            font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 700;
+            color: rgba(212,175,55,0.1); position: absolute; top: -30px; left: -20px; line-height: 1;
+        }
+
+        .founder { padding: 140px 0; background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%); position: relative; overflow: hidden; }
+        .founder::before {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 70%); border-radius: 50%;
+        }
+        .founder-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
+        .founder-image { position: relative; }
+        .founder-image-wrapper { position: relative; border-radius: 30px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.12); }
+        .founder-image-wrapper img { width: 100%; display: block; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .founder-image-wrapper:hover img { transform: scale(1.05); }
+        .founder-image-wrapper::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.3) 100%); pointer-events: none;
+        }
+        .founder-name-badge {
+            position: absolute; bottom: 30px; left: 30px; right: 30px;
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 16px; padding: 20px 25px;
+        }
+        .founder-name-badge h3 { font-size: 1.4rem; margin-bottom: 5px; color: var(--white); }
+        .founder-name-badge p { font-size: 0.9rem; color: var(--soft-gold); font-weight: 500; }
+        .founder-info h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 10px; }
+        .founder-info .role {
+            font-size: 1.1rem; color: var(--primary-gold); font-weight: 600; margin-bottom: 30px;
+            display: inline-block; padding: 8px 20px; background: rgba(212,175,55,0.1); border-radius: 50px;
+        }
+        .founder-info p { font-size: 1.05rem; line-height: 1.9; color: var(--text-medium); margin-bottom: 20px; }
+        .founder-achievements { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+        .achievement-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border);
+            border-radius: 16px; padding: 22px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .achievement-card:hover { transform: translateY(-5px); border-color: var(--primary-gold); box-shadow: 0 15px 40px rgba(212,175,55,0.1); }
+        .achievement-card .ach-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .achievement-card h4 { font-size: 1rem; margin-bottom: 6px; color: var(--text-dark); }
+        .achievement-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; margin: 0; }
+
+        .services { padding: 140px 0; background: var(--white); position: relative; }
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .service-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 40px 30px;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--luxury-gold), var(--primary-gold));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 25px 60px rgba(212,175,55,0.12); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon {
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(255,215,0,0.1));
+            border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin-bottom: 25px; transition: all 0.4s ease;
+        }
+        .service-card:hover .service-icon { transform: scale(1.1) rotate(-5deg); background: linear-gradient(135deg, rgba(212,175,55,0.25), rgba(255,215,0,0.15)); }
+        .service-card h3 { font-size: 1.15rem; margin-bottom: 15px; color: var(--text-dark); }
+        .service-card p { font-size: 0.9rem; line-height: 1.7; color: var(--text-light); margin-bottom: 15px; }
+        .service-card .service-details { font-size: 0.85rem; line-height: 1.6; color: var(--text-medium); padding-top: 15px; border-top: 1px solid rgba(212,175,55,0.15); }
+
+        .portfolio { padding: 140px 0; background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 50%, var(--white) 100%); position: relative; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .portfolio-item { position: relative; border-radius: 24px; overflow: hidden; cursor: pointer; box-shadow: 0 15px 50px rgba(0,0,0,0.08); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .portfolio-item:nth-child(2) { margin-top: 40px; }
+        .portfolio-item:nth-child(3) { margin-top: 20px; }
+        .portfolio-item:hover { transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.15); }
+        .portfolio-item img { width: 100%; height: 450px; object-fit: cover; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .portfolio-item:hover img { transform: scale(1.1); }
+        .portfolio-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.7) 100%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 35px; opacity: 0; transition: opacity 0.5s ease;
+        }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .portfolio-overlay h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 10px; transform: translateY(20px); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .portfolio-overlay p { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.6; transform: translateY(20px); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s; }
+        .portfolio-item:hover .portfolio-overlay h3, .portfolio-item:hover .portfolio-overlay p { transform: translateY(0); }
+        .portfolio-glass-tag {
+            position: absolute; top: 20px; right: 20px;
+            background: var(--glass-white-strong); backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); border: 1px solid var(--glass-border);
+            border-radius: 50px; padding: 8px 18px; font-size: 0.78rem;
+            font-weight: 600; color: var(--white); letter-spacing: 1px;
+        }
+
+        .process { padding: 140px 0; background: var(--white); position: relative; }
+        .process-timeline { position: relative; max-width: 1000px; margin: 0 auto; }
+        .process-timeline::before {
+            content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+            width: 2px; background: linear-gradient(180deg, var(--primary-gold), var(--soft-gold), var(--primary-gold));
+            transform: translateX(-50%);
+        }
+        .process-step { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; position: relative; }
+        .process-step:nth-child(even) .process-content { order: 2; }
+        .process-step:nth-child(even) .process-visual { order: 1; }
+        .process-step:last-child { margin-bottom: 0; }
+        .process-dot {
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+            width: 24px; height: 24px; background: var(--white);
+            border: 3px solid var(--primary-gold); border-radius: 50%;
+            z-index: 2; box-shadow: 0 0 20px rgba(212,175,55,0.3);
+        }
+        .process-dot::after { content: ''; position: absolute; inset: -8px; border: 1px solid rgba(212,175,55,0.3); border-radius: 50%; animation: pulse-ring 2s ease-out infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+        .process-content {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 40px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .process-content:hover { transform: translateY(-5px); border-color: var(--primary-gold); box-shadow: 0 20px 50px rgba(212,175,55,0.1); }
+        .process-step-number { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: var(--primary-gold); opacity: 0.3; line-height: 1; margin-bottom: 15px; }
+        .process-content h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--text-dark); }
+        .process-content p { font-size: 0.95rem; line-height: 1.8; color: var(--text-medium); }
+        .process-visual { display: flex; align-items: center; justify-content: center; }
+        .process-visual-inner {
+            width: 200px; height: 200px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(255,215,0,0.05));
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 3.5rem; border: 1px solid rgba(212,175,55,0.2); transition: all 0.5s ease;
+        }
+        .process-step:hover .process-visual-inner { transform: scale(1.1); box-shadow: 0 0 60px rgba(212,175,55,0.15); }
+
+        .streaming { padding: 140px 0; background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%); position: relative; }
+        .streaming-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 25px; margin-bottom: 60px; }
+        .platform-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 40px 25px; text-align: center;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
+        }
+        .platform-card::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+            opacity: 0; transition: opacity 0.5s ease;
+        }
+        .platform-card:hover::before { opacity: 1; }
+        .platform-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 20px 50px rgba(212,175,55,0.1); }
+        .platform-logo { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; font-family: 'Inter', sans-serif; letter-spacing: -1px; }
+        .platform-logo.netflix { color: #E50914; }
+        .platform-logo.prime { color: #00A8E1; }
+        .platform-logo.hulu { color: #1CE783; }
+        .platform-logo.disney { color: #113CCF; }
+        .platform-logo.youtube { color: #FF0000; }
+        .platform-card h4 { font-size: 1rem; margin-bottom: 10px; color: var(--text-dark); }
+        .platform-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+        .streaming-info {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 50px; text-align: center; max-width: 900px; margin: 0 auto;
+        }
+        .streaming-info h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--text-dark); }
+        .streaming-info p { font-size: 1rem; line-height: 1.8; color: var(--text-medium); }
+        .streaming-info .disclaimer { margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(212,175,55,0.15); font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+
+        .why-us { padding: 140px 0; background: var(--white); position: relative; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .why-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 45px 35px; text-align: center;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
+        }
+        .why-card::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+            transform: scaleX(0); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .why-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 25px 60px rgba(212,175,55,0.1); }
+        .why-card:hover::after { transform: scaleX(1); }
+        .why-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(255,215,0,0.1));
+            border-radius: 20px; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin: 0 auto 25px; transition: all 0.4s ease;
+        }
+        .why-card:hover .why-icon { transform: scale(1.15) rotate(-5deg); }
+        .why-card h3 { font-size: 1.2rem; margin-bottom: 15px; color: var(--text-dark); }
+        .why-card p { font-size: 0.92rem; line-height: 1.7; color: var(--text-light); }
+
+        .testimonials { padding: 140px 0; background: linear-gradient(180deg, var(--white) 0%, var(--off-white) 100%); position: relative; }
+        .testimonial-slider { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; }
+        .testimonial-track { display: flex; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .testimonial-slide { min-width: 100%; padding: 20px; }
+        .testimonial-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px); border: 1px solid var(--glass-border);
+            border-radius: 30px; padding: 60px; text-align: center; position: relative;
+        }
+        .testimonial-card::before {
+            content: '"'; font-family: 'Playfair Display', serif; font-size: 8rem;
+            color: var(--primary-gold); opacity: 0.15; position: absolute;
+            top: 10px; left: 40px; line-height: 1;
+        }
+        .testimonial-quote { font-family: 'Playfair Display', serif; font-size: 1.4rem; line-height: 1.8; color: var(--text-dark); font-style: italic; margin-bottom: 35px; }
+        .testimonial-author { display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .testimonial-avatar {
+            width: 55px; height: 55px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-gold), var(--luxury-gold));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; font-weight: 700; color: var(--white);
+        }
+        .testimonial-author-info h4 { font-size: 1.05rem; margin-bottom: 3px; color: var(--text-dark); }
+        .testimonial-author-info p { font-size: 0.85rem; color: var(--primary-gold); font-weight: 500; }
+        .testimonial-nav { display: flex; justify-content: center; gap: 12px; margin-top: 40px; }
+        .testimonial-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(212,175,55,0.2); border: none; cursor: pointer; transition: all 0.3s ease; }
+        .testimonial-dot.active { background: var(--primary-gold); transform: scale(1.2); }
+        .testimonial-arrows { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; padding: 0 -20px; pointer-events: none; }
+        .testimonial-arrow {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: var(--glass-white-strong); backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); border: 1px solid var(--glass-border);
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; pointer-events: all; transition: all 0.3s ease;
+            font-size: 1.2rem; color: var(--text-dark);
+        }
+        .testimonial-arrow:hover { background: var(--primary-gold); color: var(--white); border-color: var(--primary-gold); }
+
+        .final-cta {
+            padding: 160px 0; text-align: center;
+            background: linear-gradient(135deg, var(--off-white) 0%, #FFF9E6 30%, #FFF5D6 50%, var(--off-white) 100%);
+            position: relative; overflow: hidden;
+        }
+        .final-cta::before {
+            content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%); border-radius: 50%;
+        }
+        .final-cta-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 0 40px; }
+        .final-cta h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 25px; line-height: 1.15; }
+        .final-cta p { font-size: 1.1rem; line-height: 1.8; color: var(--text-medium); margin-bottom: 50px; }
+        .final-cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .final-cta .btn { padding: 18px 40px; font-size: 1rem; }
+
+        .contact { padding: 140px 0 80px; background: var(--white); position: relative; }
+        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .contact-card {
+            background: var(--glass-white-strong); backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 45px 30px; text-align: center;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none; color: inherit; display: block;
+        }
+        .contact-card:hover { transform: translateY(-10px); border-color: var(--primary-gold); box-shadow: 0 25px 60px rgba(212,175,55,0.12); }
+        .contact-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(255,215,0,0.1));
+            border-radius: 20px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin: 0 auto 25px; transition: all 0.4s ease;
+        }
+        .contact-card:hover .contact-icon { transform: scale(1.1); background: linear-gradient(135deg, rgba(212,175,55,0.25), rgba(255,215,0,0.15)); }
+        .contact-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--text-dark); }
+        .contact-card p { font-size: 0.95rem; color: var(--primary-gold); font-weight: 600; }
+        .contact-card .contact-detail { font-size: 0.85rem; color: var(--text-light); margin-top: 8px; }
+
+        .footer { background: var(--text-dark); padding: 80px 0 40px; position: relative; overflow: hidden; }
+        .footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, transparent, var(--primary-gold), transparent); }
+        .footer-content { max-width: 1300px; margin: 0 auto; padding: 0 40px; text-align: center; }
+        .footer-logo { margin-bottom: 30px; }
+        .footer-logo img { height: 60px; margin-bottom: 15px; }
+        .footer-logo h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }
+        .footer-logo p { font-size: 0.95rem; color: var(--soft-gold); font-style: italic; }
+        .footer-links { display: flex; justify-content: center; gap: 35px; margin-bottom: 40px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--primary-gold); }
+        .footer-divider { width: 100px; height: 1px; background: linear-gradient(90deg, transparent, var(--primary-gold), transparent); margin: 0 auto 30px; }
+        .footer-bottom { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+        .footer-bottom span { color: var(--primary-gold); }
+
+        .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.05s; }
+        .reveal-delay-2 { transition-delay: 0.1s; }
+        .reveal-delay-3 { transition-delay: 0.15s; }
+        .reveal-delay-4 { transition-delay: 0.2s; }
+        .reveal-delay-5 { transition-delay: 0.25s; }
+        .reveal-delay-6 { transition-delay: 0.3s; }
+        .reveal-delay-7 { transition-delay: 0.35s; }
+        .reveal-delay-8 { transition-delay: 0.4s; }
+
+        /* Extra animations */
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes rotateIn {
+            from { opacity: 0; transform: rotate(-8deg) scale(0.9); }
+            to { opacity: 1; transform: rotate(0deg) scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .service-card { animation: none; }
+        .service-card.active-anim { animation: rotateIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .stat-card { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease; }
+        .gold-shimmer {
+            background: linear-gradient(90deg, var(--primary-gold) 0%, var(--luxury-gold) 40%, var(--primary-gold) 60%, var(--soft-gold) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+
+        /* Gradual blur fallback */
+        #gradual-blur-stats > div {
+            position: absolute; inset: 0;
+            pointer-events: none;
+        }
+        /* ===== CONSULTATION CHECKOUT STYLES ===== */
+        .consult-option { display:block; cursor:pointer; }
+        .consult-option-inner {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:16px 20px;
+            background:rgba(255,255,255,0.6);
+            backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+            border:2px solid rgba(212,175,55,0.2);
+            border-radius:18px;
+            transition:all 0.3s ease;
+        }
+        .consult-option input:checked + .consult-option-inner {
+            border-color:var(--primary-gold);
+            background:rgba(212,175,55,0.08);
+            box-shadow:0 6px 24px rgba(212,175,55,0.15);
+        }
+        .consult-option:hover .consult-option-inner { border-color:rgba(212,175,55,0.5); }
+        .pay-account-card {
+            background:rgba(255,255,255,0.6);
+            backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+            border:1px solid rgba(212,175,55,0.3);
+            border-radius:20px; padding:20px;
+            margin-bottom:6px;
+        }
+        .mouse-glow { position: fixed; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 0; transition: transform 0.3s ease-out; transform: translate(-50%, -50%); }
+
+        .glass-shine { position: relative; overflow: hidden; }
+        .glass-shine::after {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+            transform: translateX(-100%); transition: transform 0.8s ease;
+        }
+        .glass-shine:hover::after { transform: translateX(100%); }
+
+        @media (max-width: 1200px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 1024px) {
+            .navbar { padding: 10px 20px; width: calc(100% - 24px); top: 12px; border-radius: 50px; }
+            .nav-links { display: none; position: absolute; top: calc(100% + 10px); left: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); flex-direction: column; padding: 25px 28px; gap: 18px; border: 1px solid rgba(212,175,55,0.2); border-radius: 24px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .about-grid, .founder-grid { grid-template-columns: 1fr; gap: 50px; }
+            .story-block { grid-template-columns: 1fr; gap: 40px; }
+            .story-block:nth-child(even) .story-image, .story-block:nth-child(even) .story-text { order: unset; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-item:nth-child(2), .portfolio-item:nth-child(3) { margin-top: 0; }
+            .streaming-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; max-width: 500px; }
+            .process-timeline::before { left: 20px; }
+            .process-step { grid-template-columns: 1fr; padding-left: 60px; }
+            .process-step:nth-child(even) .process-content, .process-step:nth-child(even) .process-visual { order: unset; }
+            .process-dot { left: 20px; }
+            .process-visual { display: none; }
+        }
+        /* ===== FLOATING CONSULT BUTTON ===== */
+        .float-consult-btn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 9999;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 50px;
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.18), 0 2px 8px rgba(0,0,0,0.07);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+        .float-consult-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.18), rgba(255,215,0,0.08));
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .float-consult-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+            border-color: var(--primary-gold);
+            box-shadow: 0 16px 48px rgba(212,175,55,0.32), 0 4px 16px rgba(0,0,0,0.1);
+        }
+        .float-consult-btn:hover::before { opacity: 1; }
+        .float-consult-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 4px 18px rgba(212,175,55,0.22);
+        }
+        .float-consult-btn svg { flex-shrink: 0; }
+        .float-consult-btn.hidden { opacity: 0; pointer-events: none; transform: translateY(12px); }
+        @media (max-width: 768px) {
+            .float-consult-btn { bottom: 20px; right: 16px; padding: 12px 20px; font-size: 0.82rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats { gap: 15px; }
+            .stat-card { min-width: 140px; padding: 18px 20px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .founder-achievements { grid-template-columns: 1fr; }
+            .streaming-grid { grid-template-columns: 1fr; }
+            .testimonial-card { padding: 35px 25px; }
+            .testimonial-quote { font-size: 1.1rem; }
+            .section-container { padding: 0 20px; }
+            .navbar { padding: 8px 16px; width: calc(100% - 20px); top: 10px; border-radius: 40px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .final-cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Floating Consult Button -->
+    <a href="#contact" class="float-consult-btn" id="floatConsultBtn" aria-label="Book a Consultation">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Book a Consultation</span>
+    </a>
+
+    <!-- CINEMATIC LOADER -->
+    <div id="cine-loader">
+        <canvas id="cine-grain"></canvas>
+        <div id="cine-bars"><div id="cine-bar-top"></div><div id="cine-bar-bottom"></div></div>
+        <div id="cine-center">
+            <div id="cine-line-left"></div>
+            <div id="cine-logo-wrap">
+                <img src="https://i.postimg.cc/g2TxBrzH/file-00000000a70471f48029300cc4869952.png" id="cine-logo-img" alt="W">
+                <div id="cine-title">WINSOME FILM PRO</div>
+                <div id="cine-tagline">Crafting Stories That Inspire The World</div>
+            </div>
+            <div id="cine-line-right"></div>
+        </div>
+        <div id="cine-bottom-text">A PREMIUM FILM PRODUCTION EXPERIENCE</div>
+    </div>
+
+    <style>
+    #cine-loader {
+        position: fixed; inset: 0; z-index: 99999;
+        background: #000;
+        display: flex; align-items: center; justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.8s ease;
+    }
+    #cine-loader.fade-out { opacity: 0; pointer-events: none; }
+    #cine-grain {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        opacity: 0.06; pointer-events: none; z-index: 1;
+    }
+    #cine-bars { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+    #cine-bar-top, #cine-bar-bottom {
+        position: absolute; left: 0; right: 0; height: 80px;
+        background: #000;
+        transition: height 1s cubic-bezier(0.16,1,0.3,1);
+    }
+    #cine-bar-top { top: 0; }
+    #cine-bar-bottom { bottom: 0; }
+    #cine-loader.bars-open #cine-bar-top,
+    #cine-loader.bars-open #cine-bar-bottom { height: 0px; }
+    #cine-center {
+        position: relative; z-index: 3;
+        display: flex; align-items: center; gap: 28px;
+        opacity: 0; transform: scale(0.95);
+        transition: opacity 0.9s ease 0.8s, transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.8s;
+    }
+    #cine-loader.show-content #cine-center { opacity: 1; transform: scale(1); }
+    #cine-line-left, #cine-line-right {
+        width: 0px; height: 1px;
+        background: linear-gradient(90deg, transparent, #D4AF37);
+        transition: width 1s cubic-bezier(0.16,1,0.3,1) 1.2s;
+    }
+    #cine-line-right { background: linear-gradient(90deg, #D4AF37, transparent); }
+    #cine-loader.show-content #cine-line-left,
+    #cine-loader.show-content #cine-line-right { width: 80px; }
+    #cine-logo-wrap { text-align: center; }
+    #cine-logo-img { height: 64px; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: 0; transition: opacity 0.8s ease 1s; }
+    #cine-loader.show-content #cine-logo-img { opacity: 1; }
+    #cine-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.1rem, 3vw, 1.8rem);
+        font-weight: 700; letter-spacing: 6px;
+        color: transparent;
+        background: linear-gradient(90deg, #B8960C, #FFD700, #FFF8DC, #FFD700, #B8960C);
+        background-size: 200% auto;
+        -webkit-background-clip: text; background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: cineShimmer 2.5s linear infinite;
+        opacity: 0; transition: opacity 0.8s ease 1.2s;
+        white-space: nowrap;
+    }
+    #cine-loader.show-content #cine-title { opacity: 1; }
+    @keyframes cineShimmer {
+        0% { background-position: 200% center; }
+        100% { background-position: -200% center; }
+    }
+    #cine-tagline {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.7rem; letter-spacing: 3px;
+        text-transform: uppercase; color: rgba(255,255,255,0.4);
+        margin-top: 8px; opacity: 0;
+        transition: opacity 0.8s ease 1.5s;
+    }
+    #cine-loader.show-content #cine-tagline { opacity: 1; }
+    #cine-bottom-text {
+        position: absolute; bottom: 32px; z-index: 3;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.65rem; letter-spacing: 4px;
+        color: rgba(255,255,255,0.2); text-transform: uppercase;
+        opacity: 0; transition: opacity 0.8s ease 1.8s;
+    }
+    #cine-loader.show-content #cine-bottom-text { opacity: 1; }
+    </style>
+    <script>
+    (function() {
+        // Film grain
+        const canvas = document.getElementById('cine-grain');
+        const ctx = canvas.getContext('2d');
+        function resizeGrain() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        resizeGrain();
+        window.addEventListener('resize', resizeGrain);
+        function drawGrain() {
+            const img = ctx.createImageData(canvas.width, canvas.height);
+            for (let i = 0; i < img.data.length; i += 4) {
+                const v = Math.random() * 255;
+                img.data[i] = img.data[i+1] = img.data[i+2] = v;
+                img.data[i+3] = 255;
+            }
+            ctx.putImageData(img, 0, 0);
+            requestAnimationFrame(drawGrain);
+        }
+        drawGrain();
+
+        const loader = document.getElementById('cine-loader');
+        // Sequence
+        setTimeout(() => loader.classList.add('bars-open'), 100);
+        setTimeout(() => loader.classList.add('show-content'), 400);
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            setTimeout(() => { loader.style.display = 'none'; }, 900);
+        }, 3200);
+    })();
+    </script>
+
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- FOUNDER HERO SECTION -->
+    <section class="founder-hero" id="home-top">
+        <canvas id="liquid-chrome-canvas"></canvas>
+        <div class="founder-hero-overlay"></div>
+        <div class="founder-hero-content">
+            <div class="founder-hero-img-wrap">
+                <img src="https://i.postimg.cc/jj7xKwFs/IMG-20260619-WA0083.jpg" alt="Adewale Pelumi">
+            </div>
+            <div class="founder-hero-name" id="vp-name">Adewale Pelumi</div>
+            <div class="founder-hero-role">Founder & Creative Director</div>
+            <p class="founder-hero-tagline">Crafting Stories That Inspire The World — Winsome Film Pro</p>
+            <div class="founder-hero-scroll">
+                <a href="#home">
+                    <span>Explore</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <img src="https://i.postimg.cc/g2TxBrzH/file-00000000a70471f48029300cc4869952.png" alt="Winsome Film Pro Logo" style="height:78px;">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--text-dark);letter-spacing:0.5px;white-space:nowrap;">Winsome Film Pro</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#streaming">Streaming</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-bg-film"></div>
+        <div class="light-streak light-streak-1"></div>
+        <div class="light-streak light-streak-2"></div>
+        <div class="light-streak light-streak-3"></div>
+        <div class="floating-glass floating-glass-1"></div>
+        <div class="floating-glass floating-glass-2"></div>
+        <div class="floating-glass floating-glass-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37" stroke="none"><circle cx="12" cy="12" r="6"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/></circle></svg>Premium Film Production Studio</div>
+            <h1>Crafting Stories That<br><span class="gold-text">Inspire The World</span></h1>
+            <p class="hero-subtitle">Professional Film Production, Documentary Creation, Commercial Advertising, Social Media Campaigns, and Streaming Platform Readiness Services.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary glass-shine">
+                    <span>View Portfolio</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-glass glass-shine">
+                    <span>Book A Consultation</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </a>
+            </div>
+            <div class="hero-stats" style="position:relative;">
+            <div style="position:absolute;bottom:0;left:0;right:0;height:3rem;pointer-events:none;z-index:10;" id="gradual-blur-stats"></div>
+                <div class="stat-card"><div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg></div><div class="stat-number">50+</div><div class="stat-label">Creative Projects</div></div>
+                <div class="stat-card"><div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="#D4AF37" stroke="none"/></svg></div><div class="stat-number">Pro</div><div class="stat-label">Production Quality</div></div>
+                <div class="stat-card"><div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="stat-number">Global</div><div class="stat-label">Distribution Vision</div></div>
+                <div class="stat-card"><div class="stat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div class="stat-number">Premium</div><div class="stat-label">Storytelling</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Our Story</div>
+                <h2 class="section-title">About Winsome Film Pro</h2>
+                <p class="section-subtitle">A premium film production company dedicated to transforming visions into cinematic masterpieces.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Where Vision Meets Excellence</h3>
+                    <p>Winsome Film Pro is a forward-thinking film production company built on the belief that every story deserves to be told with authenticity, creativity, and cinematic excellence. We are not just filmmakers — we are storytellers, brand architects, and visual strategists who understand the power of compelling narratives.</p>
+                    <p>Founded with a passion for visual storytelling, Winsome Film Pro has grown into a trusted partner for brands, artists, and visionaries who want their stories to resonate on a global scale. From intimate documentaries to high-impact commercial campaigns, we bring the same level of dedication, artistry, and technical mastery to every project.</p>
+                    <p>Our mission is simple yet profound: to craft stories that inspire, connect, and leave lasting impressions. In a world saturated with content, we believe in the enduring power of quality storytelling — the kind that moves audiences, builds brands, and creates meaningful change.</p>
+                </div>
+                <div class="about-image reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80" alt="Film Production">
+                    <div class="glass-overlay">
+                        <h4>Our Philosophy</h4>
+                        <p>Every frame tells a story. Every story deserves excellence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-story-blocks">
+                <div class="story-block reveal">
+                    <div class="story-image">
+                        <span class="story-number">01</span>
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" alt="Storytelling">
+                    </div>
+                    <div class="story-text">
+                        <h4>The Power of Storytelling</h4>
+                        <p>Storytelling is the oldest and most powerful form of human communication. At Winsome Film Pro, we believe that stories have the unique ability to transcend cultural boundaries, evoke deep emotions, and create lasting connections between brands and their audiences.</p>
+                        <p>Whether it is a brand documentary that reveals the heart behind a business, a commercial that captures attention in seconds, or a social media campaign that sparks conversation — we approach every project with the understanding that stories are not just told, they are felt. Our storytelling philosophy centers on authenticity, emotional resonance, and visual beauty.</p>
+                        <p>We take the time to understand the essence of your message, your audience, and your goals. Then we craft narratives that do not just inform — they inspire action, build trust, and create memorable experiences that audiences carry with them long after the screen fades to black.</p>
+                    </div>
+                </div>
+
+                <div class="story-block reveal">
+                    <div class="story-image">
+                        <span class="story-number">02</span>
+                        <img src="https://i.postimg.cc/25t1HPXS/Screenshot-20260619-194735-Gallery.jpg" alt="Visual Excellence">
+                    </div>
+                    <div class="story-text">
+                        <h4>Visual Content That Transforms Brands</h4>
+                        <p>In today's digital-first world, visual content is the currency of communication. Studies consistently show that audiences retain significantly more information from video content compared to text alone. For brands, this means that the quality of your visual storytelling directly impacts how your audience perceives, remembers, and engages with your brand.</p>
+                        <p>At Winsome Film Pro, we create visual content that does more than look beautiful — it drives results. Our commercial productions are designed to capture attention, communicate value propositions clearly, and compel viewers to take action. Our brand storytelling pieces build emotional connections that transform casual viewers into loyal advocates.</p>
+                        <p>We understand that every brand has a unique voice, and our role is to amplify that voice through stunning visuals, compelling narratives, and strategic distribution. From the first frame to the final cut, we ensure that every piece of content we produce elevates your brand and advances your business objectives.</p>
+                    </div>
+                </div>
+
+                <div class="story-block reveal">
+                    <div class="story-image">
+                        <span class="story-number">03</span>
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80" alt="Global Vision">
+                    </div>
+                    <div class="story-text">
+                        <h4>A Vision for Global Storytelling</h4>
+                        <p>Winsome Film Pro was founded with a global vision — to create content that resonates across cultures, languages, and borders. We believe that great stories are universal, and our ambition is to position Nigerian and African storytelling on the world stage alongside the best productions from Hollywood, Bollywood, and beyond.</p>
+                        <p>Our vision extends beyond individual projects. We are building a creative ecosystem that nurtures talent, embraces innovation, and pushes the boundaries of what is possible in film production. From streaming platform readiness to international distribution consultation, we prepare our clients' content for global audiences.</p>
+                        <p>We envision a future where Winsome Film Pro is synonymous with world-class African storytelling — where our productions are celebrated at international film festivals, streamed on major platforms worldwide, and recognized for their artistic excellence and cultural authenticity. This is not just a dream; it is the mission that drives every decision we make.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder" id="founder">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Leadership</div>
+                <h2 class="section-title">Meet The Founder</h2>
+                <p class="section-subtitle">The creative visionary behind Winsome Film Pro.</p>
+            </div>
+
+            <div class="founder-grid">
+                <div class="founder-image reveal">
+                    <div class="founder-image-wrapper">
+                        <img src="https://i.postimg.cc/jj7xKwFs/IMG-20260619-WA0083.jpg" alt="Adewale Oluwapelumi Eniola">
+                        <div class="founder-name-badge">
+                            <h3>Adewale Oluwapelumi Eniola</h3>
+                            <p>Founder & Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="founder-info reveal reveal-delay-2">
+                    <h2>Adewale Oluwapelumi Eniola</h2>
+                    <span class="role">Founder & Creative Director</span>
+                    <p>Adewale Oluwapelumi Eniola is the visionary founder and creative director of Winsome Film Pro, a premium film production company dedicated to crafting stories that inspire the world. With an unwavering passion for filmmaking and a deep understanding of visual storytelling, Adewale has built Winsome Film Pro into a trusted creative partner for brands, artists, and organizations seeking cinematic excellence.</p>
+                    <p>His journey into filmmaking began with a fascination for the way stories can transform perspectives, bridge cultural divides, and create lasting emotional impact. Over the years, Adewale has honed his craft across multiple disciplines — from documentary production that captures the raw authenticity of real-life narratives, to commercial advertising that distills brand messages into powerful visual experiences, to brand storytelling that builds deep connections between organizations and their audiences.</p>
+                    <p>Adewale believes that every project is an opportunity to push creative boundaries while staying true to the story at its core. His approach combines artistic vision with strategic thinking, ensuring that every production not only looks stunning but also achieves its intended purpose — whether that is building brand awareness, driving engagement, or creating social impact.</p>
+                    <p>Under his leadership, Winsome Film Pro has delivered over 50 creative projects spanning film production, documentary creation, commercial advertising, music videos, brand storytelling, social media campaigns, YouTube content, and streaming platform readiness consultation. His commitment to excellence, attention to detail, and genuine passion for storytelling have earned him a reputation as one of the most promising creative directors in the Nigerian film production landscape.</p>
+
+                    <div class="founder-achievements">
+                        <div class="achievement-card">
+                            <div class="ach-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg></div>
+                            <h4>Film Production</h4>
+                            <p>Expert in cinematic storytelling and visual narrative construction</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="#D4AF37" stroke="none"/></svg></div>
+                            <h4>Documentary</h4>
+                            <p>Capturing authentic stories with emotional depth and integrity</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+                            <h4>Commercial</h4>
+                            <p>Creating high-impact advertising that drives brand results</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                            <h4>Brand Story</h4>
+                            <p>Building narratives that connect brands with audiences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-subtitle">Comprehensive film production and content creation services designed to elevate your brand and tell your story with cinematic excellence.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg></div>
+                    <h3>Film Production</h3>
+                    <p>From concept to final cut, we produce cinematic films that captivate audiences and tell stories with emotional depth and visual brilliance.</p>
+                    <div class="service-details">
+                        Our film production services cover the entire creative journey. We begin with script development and storyboarding, moving through professional casting, location scouting, and world-class cinematography. Our post-production pipeline includes color grading, sound design, and visual effects that give your film a polished, theatrical quality. Whether you are producing a short film, feature-length project, or series pilot, we bring the same level of passion and precision to every frame.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></div>
+                    <h3>Documentary Production</h3>
+                    <p>Real stories, real impact. We create powerful documentaries that inform, inspire, and drive meaningful conversations.</p>
+                    <div class="service-details">
+                        Documentary filmmaking is at the heart of what we do. We specialize in uncovering authentic narratives and presenting them with cinematic beauty and journalistic integrity. Our documentary process involves deep research, intimate interviews, stunning B-roll cinematography, and meticulous editing that weaves together compelling storylines. From social impact documentaries to corporate storytelling pieces, we ensure every documentary we produce resonates with truth and emotional power.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+                    <h3>Commercial Advertising</h3>
+                    <p>High-impact commercials that capture attention, communicate your message, and drive measurable results for your brand.</p>
+                    <div class="service-details">
+                        In the attention economy, your commercial has seconds to make an impression. We create advertising content that stops the scroll, captures attention, and converts viewers into customers. Our commercial production process integrates creative strategy, brand positioning, and cinematic execution to deliver ads that perform across television, digital platforms, and social media. From product showcases to brand manifestos, we craft commercials that people actually want to watch.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+                    <h3>Music Video Production</h3>
+                    <p>Visually stunning music videos that amplify your sound, express your artistry, and connect with your audience on a deeper level.</p>
+                    <div class="service-details">
+                        Music and visuals are inseparable in today's entertainment landscape. We create music videos that are not just accompaniments to songs — they are standalone artistic expressions that elevate the music and expand the artist's creative universe. Our music video production includes concept development, choreography coordination, location production, and post-production effects that create visually arresting content worthy of major platforms and award consideration.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-5">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="13" y2="13"/></svg></div>
+                    <h3>Brand Storytelling</h3>
+                    <p>Transform your brand identity into compelling visual narratives that build trust, loyalty, and emotional connection with your audience.</p>
+                    <div class="service-details">
+                        Every brand has a story. Our brand storytelling service helps you discover, articulate, and visually express that story in ways that resonate with your target audience. We create brand films, origin stories, behind-the-scenes content, and narrative-driven marketing pieces that humanize your brand and differentiate you from competitors. The result is content that does not just sell — it builds lasting relationships between your brand and the people who matter most.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-6">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
+                    <h3>Social Media Ads Management</h3>
+                    <p>Strategic social media advertising campaigns designed to maximize reach, engagement, and conversion across all major platforms.</p>
+                    <div class="service-details">
+                        Social media is where brands are built and audiences are won. Our social media ads management service combines creative production with strategic distribution to ensure your content reaches the right people at the right time. We produce platform-optimized video ads for Instagram, Facebook, TikTok, Twitter, and LinkedIn, then manage campaign deployment, A/B testing, and performance optimization to maximize your return on ad spend and grow your digital presence.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-7">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#D4AF37" stroke="none"/></svg></div>
+                    <h3>YouTube Content Production</h3>
+                    <p>Professional YouTube content that grows your channel, engages subscribers, and establishes your authority in your niche.</p>
+                    <div class="service-details">
+                        YouTube is the world's second-largest search engine and the premier platform for long-form video content. We help creators, brands, and organizations produce high-quality YouTube content that attracts views, builds subscriber bases, and generates revenue. Our services include channel strategy, content planning, professional filming, editing, thumbnail design, SEO optimization, and upload management. Whether you are starting a new channel or scaling an existing one, we provide the production expertise you need to succeed.
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay-8">
+                    <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>Streaming Platform Readiness</h3>
+                    <p>Prepare your content for global streaming platforms with expert consultation on packaging, distribution, and audience strategy.</p>
+                    <div class="service-details">
+                        Getting your content onto major streaming platforms requires more than just a great film — it requires understanding platform requirements, content packaging standards, metadata optimization, and distribution strategy. Our streaming platform readiness consultation guides you through every step of the process, from technical specifications and content formatting to platform-specific best practices and audience targeting strategies. We help position your content for success on Netflix, Amazon Prime Video, Hulu, Disney+, YouTube, and emerging platforms.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Our Work</div>
+                <h2 class="section-title">Portfolio Showcase</h2>
+                <p class="section-subtitle">A curated selection of our finest productions, each telling a unique story with cinematic excellence.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal reveal-delay-1">
+                    <img src="https://i.postimg.cc/sgvz3QNv/IMG-20260619-192943-253.jpg" alt="Portfolio Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Cinematic Excellence</h3>
+                        <p>A showcase of our commitment to visual storytelling at the highest level. Every frame crafted with precision, every scene designed to evoke emotion and capture the essence of the narrative.</p>
+                    </div>
+                    <div class="portfolio-glass-tag">Featured Work</div>
+                </div>
+
+                <div class="portfolio-item reveal reveal-delay-2">
+                    <img src="https://i.postimg.cc/gJyqWG5s/file-00000000873471f4b4821a9cd7bbc52d.png" alt="Portfolio Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Documentary Storytelling</h3>
+                        <p>Real stories brought to life with cinematic beauty. Our documentary work captures the authenticity of human experience while maintaining the visual standards of premium film production.</p>
+                    </div>
+                    <div class="portfolio-glass-tag">Documentary</div>
+                </div>
+
+                <div class="portfolio-item reveal reveal-delay-3">
+                    <img src="https://i.postimg.cc/GhKV8Lys/IMG-20260619-192848-716.jpg" alt="Portfolio Project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Brand Visual Identity</h3>
+                        <p>Transforming brand visions into compelling visual narratives. This project exemplifies our ability to translate brand values into cinematic experiences that resonate with target audiences.</p>
+                    </div>
+                    <div class="portfolio-glass-tag">Brand Film</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Process Section -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">How We Work</div>
+                <h2 class="section-title">Our Production Process</h2>
+                <p class="section-subtitle">A refined six-stage production pipeline that ensures every project meets the highest standards of cinematic excellence.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">01</div>
+                        <h3>Discovery</h3>
+                        <p>Every great production begins with deep understanding. In our Discovery phase, we immerse ourselves in your vision, objectives, target audience, and brand identity. We conduct comprehensive consultations to understand not just what you want to create, but why you want to create it. This phase includes creative brief development, audience research, competitive analysis, and strategic goal-setting. We ask the right questions, listen carefully to your answers, and begin crafting the creative foundation upon which your entire project will be built. The Discovery phase ensures that every subsequent decision is aligned with your core objectives and resonates with your intended audience.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/><circle cx="12" cy="12" r="4"/></svg></div>
+                    </div>
+                </div>
+
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">02</div>
+                        <h3>Creative Planning</h3>
+                        <p>With a clear understanding of your vision, we move into Creative Planning — the phase where ideas transform into actionable creative strategies. Our team develops detailed concept treatments, visual mood boards, story outlines, and creative direction documents. We explore multiple creative approaches, present options for your consideration, and refine the chosen direction until it perfectly captures your vision. This phase also includes scriptwriting, visual style development, music direction, and preliminary production design. Every creative decision is made with intention, ensuring that the final product will be cohesive, compelling, and strategically effective.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                    </div>
+                </div>
+
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">03</div>
+                        <h3>Pre-Production</h3>
+                        <p>Pre-Production is where meticulous planning meets creative ambition. This phase encompasses casting, location scouting, set design, wardrobe selection, equipment preparation, crew assembly, and detailed scheduling. We create comprehensive production timelines, shot lists, and contingency plans to ensure smooth execution. Our pre-production process leaves nothing to chance — every location is secured, every prop is sourced, every team member knows their role, and every shot is planned with precision. This thorough preparation is what allows us to execute efficiently on set and capture the footage we need to tell your story beautifully.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+                    </div>
+                </div>
+
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">04</div>
+                        <h3>Production</h3>
+                        <p>Production is where the magic happens. Our experienced crew brings the creative vision to life using professional-grade cinema cameras, lighting equipment, and sound recording technology. We maintain a positive, efficient, and collaborative on-set environment where creativity flourishes and quality is never compromised. Our director works closely with talent to draw out authentic performances, while our cinematography team captures stunning visuals that serve the story. Every production day is managed with military precision — we respect your time, your budget, and your creative vision while pushing for excellence in every take.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg></div>
+                    </div>
+                </div>
+
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">05</div>
+                        <h3>Post-Production</h3>
+                        <p>Post-Production is where raw footage transforms into cinematic art. Our editing team assembles the narrative with pacing, rhythm, and emotional arc in mind. We apply professional color grading to create a cohesive visual palette that enhances mood and atmosphere. Sound design, music composition, and audio mixing ensure that the sonic experience matches the visual quality. Visual effects, motion graphics, and title design add polish and production value. This phase involves multiple review rounds with you to ensure the final product exceeds expectations. We do not rush post-production — we refine until every frame is perfect.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3"/></svg></div>
+                    </div>
+                </div>
+
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-step-number">06</div>
+                        <h3>Delivery</h3>
+                        <p>The Delivery phase marks the culmination of our collaborative journey. We provide your final production in all required formats and resolutions, optimized for your intended distribution channels — whether that is theatrical release, television broadcast, social media, YouTube, or streaming platforms. We also offer guidance on distribution strategy, platform-specific optimization, and launch planning to maximize the impact of your content. Our relationship does not end at delivery — we remain available for support, additional versions, and future projects. Your success is our success, and we are committed to ensuring your content reaches its full potential.</p>
+                    </div>
+                    <div class="process-dot"></div>
+                    <div class="process-visual">
+                        <div class="process-visual-inner"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Streaming Platforms Section -->
+    <section class="streaming" id="streaming">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Global Reach</div>
+                <h2 class="section-title">Streaming Platform Readiness</h2>
+                <p class="section-subtitle">Preparing your content for the world's leading streaming platforms with expert consultation and strategic guidance.</p>
+            </div>
+
+            <div class="streaming-grid">
+                <div class="platform-card reveal reveal-delay-1">
+                    <div class="platform-logo netflix">NETFLIX</div>
+                    <h4>Netflix</h4>
+                    <p>Content packaging, technical specs, and submission guidance for the world's leading streaming platform.</p>
+                </div>
+                <div class="platform-card reveal reveal-delay-2">
+                    <div class="platform-logo prime">prime video</div>
+                    <h4>Amazon Prime</h4>
+                    <p>Distribution preparation and content optimization for Amazon's global streaming audience.</p>
+                </div>
+                <div class="platform-card reveal reveal-delay-3">
+                    <div class="platform-logo hulu">hulu</div>
+                    <h4>Hulu</h4>
+                    <p>Strategic content positioning and technical readiness for Hulu's diverse viewer base.</p>
+                </div>
+                <div class="platform-card reveal reveal-delay-4">
+                    <div class="platform-logo disney">Disney+</div>
+                    <h4>Disney+</h4>
+                    <p>Content preparation aligned with Disney's premium quality standards and family audience.</p>
+                </div>
+                <div class="platform-card reveal reveal-delay-5">
+                    <div class="platform-logo youtube">YouTube</div>
+                    <h4>YouTube</h4>
+                    <p>Optimization for YouTube's algorithm, monetization, and global content discovery.</p>
+                </div>
+            </div>
+
+            <div class="streaming-info reveal">
+                <h3>Platform Readiness Consultation</h3>
+                <p>Getting your content onto major streaming platforms requires more than just a great film. Each platform has specific technical requirements, content guidelines, and submission processes that must be followed precisely. Our Streaming Platform Readiness Consultation service guides you through every aspect of preparing your content for global distribution. We help with technical specifications including resolution, codec, audio formats, and subtitle requirements. We advise on content packaging, metadata optimization, thumbnail design, and promotional asset creation. Additionally, we provide strategic guidance on audience targeting, content positioning, and platform-specific best practices to maximize your content's discoverability and performance. While we do not claim official partnerships with these platforms, our expertise ensures your content meets their standards and is positioned for success.</p>
+                <p class="disclaimer">Winsome Film Pro provides consultation and preparation services for streaming platform distribution. We do not claim official partnerships with Netflix, Amazon Prime Video, Hulu, Disney+, or YouTube. Our services focus on content readiness, technical preparation, and strategic guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">Why Winsome Film Pro</h2>
+                <p class="section-subtitle">Six compelling reasons why brands and creators trust us with their most important stories.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <h3>Creative Excellence</h3>
+                    <p>We do not settle for good — we pursue extraordinary. Every project receives our full creative energy, innovative thinking, and artistic vision. Our team stays ahead of industry trends while honoring timeless storytelling principles. We push creative boundaries, experiment with new techniques, and constantly refine our craft to deliver work that stands out in a crowded content landscape. When you choose Winsome Film Pro, you are choosing a partner committed to creative excellence in every frame.</p>
+                </div>
+
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.894L15 14M3 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z"/></svg></div>
+                    <h3>Professional Production</h3>
+                    <p>Professionalism is not just a word — it is our operating standard. From the first consultation to final delivery, you will experience a level of professionalism that sets us apart. Our production processes are refined, our equipment is industry-standard, our crew is experienced, and our communication is transparent. We respect deadlines, honor budgets, and maintain the highest standards of production quality. With Winsome Film Pro, you get a professional partner who treats your project with the seriousness it deserves.</p>
+                </div>
+
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Audience Engagement</h3>
+                    <p>Content that does not engage is content that does not exist. We create with your audience at the center of every decision. Our storytelling techniques are designed to capture attention, maintain interest, and drive action. We understand audience psychology, platform algorithms, and engagement metrics. Whether your goal is brand awareness, social shares, conversions, or community building, we create content engineered to achieve measurable engagement and meaningful results.</p>
+                </div>
+
+                <div class="why-card reveal reveal-delay-4">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                    <h3>Brand Growth</h3>
+                    <p>We see every production as an investment in your brand's future. Our content is strategically designed to grow your brand — increasing visibility, building credibility, strengthening customer relationships, and driving business outcomes. We align our creative decisions with your business objectives, ensuring that every piece of content we produce contributes to your brand's growth trajectory. From startups to established enterprises, we create content that moves brands forward.</p>
+                </div>
+
+                <div class="why-card reveal reveal-delay-5">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    <h3>Reliable Delivery</h3>
+                    <p>We understand that timing is critical in the fast-paced world of content creation. Our production pipeline is designed for efficiency without sacrificing quality. We set realistic timelines, communicate proactively about progress, and deliver on our commitments. When we say a project will be completed by a certain date, you can count on it. Our reliability has earned us the trust of clients who return to us project after project, knowing they can depend on Winsome Film Pro to deliver excellence on time, every time.</p>
+                </div>
+
+                <div class="why-card reveal reveal-delay-6">
+                    <div class="why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+                    <h3>Premium Quality</h3>
+                    <p>Quality is not an accident — it is the result of intention, expertise, and relentless attention to detail. From the quality of our cinematography to the precision of our editing, from the richness of our color grading to the clarity of our sound design, every element of our production meets premium standards. We invest in the best equipment, hire the best talent, and apply the best practices. The result is content that looks, sounds, and feels like it belongs on the biggest screens and the most prestigious platforms in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Client Voices</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Hear from the brands and creators who have experienced the Winsome Film Pro difference.</p>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">Working with Winsome Film Pro transformed how our brand communicates visually. The documentary they produced for us captured the heart of our mission in ways we never imagined possible. The quality, the storytelling, the attention to detail — everything exceeded our expectations.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">A</div>
+                                <div class="testimonial-author-info">
+                                    <h4>Adebola Williams</h4>
+                                    <p>Brand Director, Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">The commercial campaign Winsome Film Pro created for our product launch was nothing short of spectacular. They understood our brand instantly and translated our vision into a cinematic experience that drove incredible engagement and sales. Truly world-class production.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">K</div>
+                                <div class="testimonial-author-info">
+                                    <h4>Kemi Adeyemi</h4>
+                                    <p>Marketing Manager, Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">As an artist, finding a production team that truly understands creative vision is rare. Winsome Film Pro not only understood my vision — they elevated it. The music video they produced for me has been praised by fans and industry professionals alike. I will be working with them again.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">T</div>
+                                <div class="testimonial-author-info">
+                                    <h4>Tunde Bakare</h4>
+                                    <p>Recording Artist, Ibadan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">The streaming platform consultation from Winsome Film Pro was invaluable. They guided us through every technical requirement, helped us optimize our content, and provided strategic advice that significantly improved our chances of platform acceptance. Their expertise is unmatched.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">O</div>
+                                <div class="testimonial-author-info">
+                                    <h4>Olumide Johnson</h4>
+                                    <p>Film Producer, Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-dot active" data-slide="0"></button>
+                    <button class="testimonial-dot" data-slide="1"></button>
+                    <button class="testimonial-dot" data-slide="2"></button>
+                    <button class="testimonial-dot" data-slide="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="final-cta">
+        <div class="final-cta-content reveal">
+            <h2>Let's Bring Your <span style="color: var(--primary-gold);">Vision To Life</span></h2>
+            <p>Whether you are building a brand, creating a documentary, producing a commercial campaign, or telling a powerful story, Winsome Film Pro is ready to help you create something extraordinary. Every great story deserves to be told with excellence — and we are here to make that happen.</p>
+            <div class="final-cta-buttons">
+                <a href="https://wa.me/2347088160941" target="_blank" class="btn btn-primary glass-shine">
+                    <span>Chat On WhatsApp</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </a>
+                <a href="mailto:winsomefilmpro@gmail.com" class="btn btn-glass glass-shine">
+                    <span>Send An Email</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-label">Get In Touch</div>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Ready to start your next project? Reach out and let's create something extraordinary together.</p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="https://wa.me/2347088160941" target="_blank" class="contact-card reveal reveal-delay-1">
+                    <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                    <h3>WhatsApp</h3>
+                    <p>+234 708 816 0941</p>
+                    <div class="contact-detail">Chat with us directly for quick responses</div>
+                </a>
+                <a href="mailto:winsomefilmpro@gmail.com" class="contact-card reveal reveal-delay-2">
+                    <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <h3>Email</h3>
+                    <p>winsomefilmpro@gmail.com</p>
+                    <div class="contact-detail">Send us a detailed project brief</div>
+                </a>
+                <div class="contact-card reveal reveal-delay-3" style="cursor:default;">
+                    <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                    <h3>Founder</h3>
+                    <p>Adewale Oluwapelumi Eniola</p>
+                    <div class="contact-detail">Founder & Creative Director</div>
+                </div>
+            </div>
+
+            <!-- CONSULTATION CHECKOUT -->
+            <div style="margin-top:80px;" class="reveal">
+                <div style="text-align:center;margin-bottom:40px;">
+                    <div class="section-label">Film Consultant Fees</div>
+                    <h2 class="section-title">Book A Consultation</h2>
+                    <p class="section-subtitle">Select your platform and complete payment to secure your session.</p>
+                </div>
+
+                <!-- STEP 1: Select Platform -->
+                <div id="consult-step1" style="max-width:480px;margin:0 auto;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border:1px solid rgba(212,175,55,0.25);border-radius:32px;padding:40px 32px;box-shadow:0 20px 60px rgba(212,175,55,0.1);">
+                        <div style="text-align:center;margin-bottom:28px;">
+                            <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(212,175,55,0.1);border-radius:50px;margin-bottom:16px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span style="font-size:0.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--primary-gold);">Secured by Winsome Film Pro</span>
+                            </div>
+                            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--text-dark);">Choose Your Platform</div>
+                        </div>
+
+                        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;" id="platform-options">
+                            <label class="consult-option" data-amount="250000" data-label="Netflix Consultation">
+                                <input type="radio" name="platform" value="netflix" style="display:none;">
+                                <div class="consult-option-inner">
+                                    <div>
+                                        <div style="font-weight:700;font-size:1rem;color:var(--text-dark);">Netflix</div>
+                                        <div style="font-size:0.82rem;color:var(--text-light);">Full streaming readiness consultation</div>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--text-dark);">₦250,000</div>
+                                        <div style="font-size:0.78rem;color:#999;text-decoration:line-through;">₦350,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="consult-option" data-amount="150000" data-label="Amazon Prime Video Consultation">
+                                <input type="radio" name="platform" value="prime" style="display:none;">
+                                <div class="consult-option-inner">
+                                    <div>
+                                        <div style="font-weight:700;font-size:1rem;color:var(--text-dark);">Amazon Prime Video</div>
+                                        <div style="font-size:0.82rem;color:var(--text-light);">Distribution preparation & optimization</div>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--text-dark);">₦150,000</div>
+                                        <div style="font-size:0.78rem;color:#999;text-decoration:line-through;">₦250,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="consult-option" data-amount="100000" data-label="YouTube Consultation">
+                                <input type="radio" name="platform" value="youtube" style="display:none;">
+                                <div class="consult-option-inner">
+                                    <div>
+                                        <div style="font-weight:700;font-size:1rem;color:var(--text-dark);">YouTube</div>
+                                        <div style="font-size:0.82rem;color:var(--text-light);">Algorithm, monetization & growth</div>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--text-dark);">₦100,000</div>
+                                        <div style="font-size:0.78rem;color:#999;text-decoration:line-through;">₦200,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="consult-option" data-amount="100000" data-label="All Social Media Handles Consultation">
+                                <input type="radio" name="platform" value="social" style="display:none;">
+                                <div class="consult-option-inner">
+                                    <div>
+                                        <div style="font-weight:700;font-size:1rem;color:var(--text-dark);">All Social Media Handles</div>
+                                        <div style="font-size:0.82rem;color:var(--text-light);">Full social platform strategy</div>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:1.15rem;font-weight:800;color:var(--text-dark);">₦100,000</div>
+                                        <div style="font-size:0.78rem;color:#999;text-decoration:line-through;">₦200,000</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <input type="text" id="consult-name" placeholder="Your Full Name" style="width:100%;padding:14px 18px;border:1px solid rgba(212,175,55,0.3);border-radius:16px;font-size:0.95rem;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);color:var(--text-dark);outline:none;margin-bottom:12px;font-family:'Inter',sans-serif;">
+                        <input type="email" id="consult-email" placeholder="Your Email Address" style="width:100%;padding:14px 18px;border:1px solid rgba(212,175,55,0.3);border-radius:16px;font-size:0.95rem;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);color:var(--text-dark);outline:none;margin-bottom:20px;font-family:'Inter',sans-serif;">
+
+                        <button onclick="consultProceed()" style="width:100%;padding:16px;background:linear-gradient(135deg,#D4AF37,#B8960C);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;letter-spacing:0.5px;box-shadow:0 10px 30px rgba(212,175,55,0.3);transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+                            Continue to Payment →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Payment Details -->
+                <div id="consult-step2" style="display:none;max-width:480px;margin:0 auto;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border:1px solid rgba(212,175,55,0.25);border-radius:32px;padding:40px 32px;box-shadow:0 20px 60px rgba(212,175,55,0.1);">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;">
+                            <button onclick="consultBack()" style="background:none;border:none;cursor:pointer;color:var(--primary-gold);font-size:0.9rem;font-weight:600;padding:0;">← Back</button>
+                        </div>
+                        <div style="text-align:center;margin-bottom:24px;">
+                            <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(212,175,55,0.1);border-radius:50px;margin-bottom:18px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span style="font-size:0.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--primary-gold);">Secured by Winsome Film Pro</span>
+                            </div>
+                            <div style="font-size:2.2rem;font-weight:900;color:var(--text-dark);font-family:'Playfair Display',serif;" id="pay-amount-display">Pay ₦250,000</div>
+                            <div style="font-size:0.85rem;color:var(--text-light);margin-top:4px;" id="pay-platform-display">Netflix Consultation</div>
+                        </div>
+
+                        <div style="background:rgba(255,245,210,0.7);border-radius:20px;padding:16px 20px;margin-bottom:24px;text-align:center;">
+                            <div style="font-size:0.9rem;color:#8B5E00;font-weight:600;">Transfer exactly <span id="pay-exact-amount" style="text-decoration:underline;"></span> to the account below.</div>
+                        </div>
+
+                        <!-- Account 1 -->
+                        <div class="pay-account-card" id="pay-acc-display">
+                            <div style="font-weight:700;font-size:0.95rem;color:var(--text-dark);margin-bottom:4px;">Access Bank</div>
+                            <div style="font-size:0.82rem;color:var(--text-light);margin-bottom:12px;">OLUWAPELUMI ENIOLA AZEEZ</div>
+                            <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.7);border-radius:14px;padding:12px 16px;border:1px solid rgba(212,175,55,0.2);">
+                                <span style="font-size:1.5rem;font-weight:800;color:var(--primary-gold);letter-spacing:2px;" id="pay-acc-num">1873473175</span>
+                                <button onclick="copyAccNum()" style="background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:10px;padding:8px 14px;font-size:0.8rem;font-weight:600;color:var(--primary-gold);cursor:pointer;" id="copy-acc-btn">Copy</button>
+                            </div>
+                            <div style="text-align:center;margin-top:10px;font-size:0.75rem;color:var(--text-light);display:flex;align-items:center;justify-content:center;gap:5px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Account rotates every 60 minutes</div>
+                        </div>
+
+                        <!-- All accounts (hidden, for copy) -->
+                        <div style="display:none;" id="all-accounts">
+                            <div>1873473175|Access Bank|OLUWAPELUMI ENIOLA AZEEZ</div>
+                            <div>1829414043|Access Bank|OLUWAPELUMI ENIOLA AZEEZ</div>
+                            <div>1829391791|Access Bank|OLUWAPELUMI ENIOLA AZEEZ</div>
+                        </div>
+
+                        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                            <div style="font-size:0.8rem;font-weight:600;color:var(--text-light);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Other Accounts</div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.5);border:1px solid rgba(212,175,55,0.15);border-radius:14px;padding:12px 16px;">
+                                <div>
+                                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-dark);">1829414043 — Access Bank</div>
+                                    <div style="font-size:0.75rem;color:var(--text-light);">OLUWAPELUMI ENIOLA AZEEZ</div>
+                                </div>
+                                <button onclick="copyText('1829414043',this)" style="background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:10px;padding:6px 12px;font-size:0.78rem;font-weight:600;color:var(--primary-gold);cursor:pointer;">Copy</button>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.5);border:1px solid rgba(212,175,55,0.15);border-radius:14px;padding:12px 16px;">
+                                <div>
+                                    <div style="font-size:0.82rem;font-weight:700;color:var(--text-dark);">1829391791 — Access Bank</div>
+                                    <div style="font-size:0.75rem;color:var(--text-light);">OLUWAPELUMI ENIOLA AZEEZ</div>
+                                </div>
+                                <button onclick="copyText('1829391791',this)" style="background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:10px;padding:6px 12px;font-size:0.78rem;font-weight:600;color:var(--primary-gold);cursor:pointer;">Copy</button>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:24px;padding:14px 18px;background:rgba(255,255,255,0.5);border-radius:16px;border:1px solid rgba(212,175,55,0.15);font-size:0.82rem;color:var(--text-light);text-align:center;">
+                            You will receive a confirmation once your payment is approved.
+                        </div>
+
+                        <div style="display:flex;gap:0;margin-top:24px;border-top:1px solid rgba(212,175,55,0.15);">
+                            <button onclick="consultCancel()" style="flex:1;padding:16px;background:none;border:none;cursor:pointer;color:#e74c3c;font-weight:700;font-size:0.95rem;">Cancel</button>
+                            <div style="width:1px;background:rgba(212,175,55,0.15);"></div>
+                            <button onclick="consultSent()" style="flex:1;padding:16px;background:none;border:none;cursor:pointer;color:var(--text-dark);font-weight:700;font-size:0.95rem;display:inline-flex;align-items:center;justify-content:center;gap:7px;">I've Sent It <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Pending Confirmation -->
+                <div id="consult-step3" style="display:none;max-width:480px;margin:0 auto;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border:1px solid rgba(212,175,55,0.25);border-radius:32px;padding:40px 32px;text-align:center;box-shadow:0 20px 60px rgba(212,175,55,0.1);">
+                        <div style="margin-bottom:20px;display:flex;justify-content:center;"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14"/><path d="M5 21h14"/><path d="M5 3a7 7 0 0 0 7 7 7 7 0 0 0-7 7"/><path d="M19 3a7 7 0 0 1-7 7 7 7 0 0 1 7 7"/></svg></div>
+                        <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text-dark);margin-bottom:12px;">Payment Pending</div>
+                        <div style="font-size:0.95rem;color:var(--text-light);margin-bottom:24px;line-height:1.7;" id="pending-details"></div>
+                        <div style="background:rgba(255,245,210,0.7);border-radius:16px;padding:14px 18px;font-size:0.85rem;color:#8B5E00;margin-bottom:24px;">
+                            Admin will review and approve your payment. Check back here for status updates.
+                        </div>
+                        <button onclick="consultReset()" style="padding:12px 32px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.3);border-radius:50px;font-size:0.9rem;font-weight:600;color:var(--primary-gold);cursor:pointer;">Make Another Booking</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://i.postimg.cc/g2TxBrzH/file-00000000a70471f48029300cc4869952.png" alt="Winsome Film Pro">
+                <h3>Winsome Film Pro</h3>
+                <p>Crafting Stories That Inspire The World</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>&copy; Winsome Film Pro</span> &mdash; Crafting Stories That Inspire The World.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== PARTICLE SYSTEM =====
+        (function() {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const particleCount = 60;
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2.5 + 0.5;
+                    this.speedX = (Math.random() - 0.5) * 0.3;
+                    this.speedY = (Math.random() - 0.5) * 0.3;
+                    this.opacity = Math.random() * 0.4 + 0.1;
+                    this.color = Math.random() > 0.5 ? '212, 175, 55' : '255, 215, 0';
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                        this.reset();
+                    }
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            let frameCount = 0;
+            function animateParticles() {
+                frameCount++;
+                if (frameCount % 2 === 0) {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    particles.forEach(p => { p.update(); p.draw(); });
+                }
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+        })();
+
+        // ===== MOUSE GLOW =====
+        (function() {
+            const glow = document.getElementById('mouseGlow');
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let currentX = mouseX;
+            let currentY = mouseY;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function updateGlow() {
+                currentX += (mouseX - currentX) * 0.08;
+                currentY += (mouseY - currentY) * 0.08;
+                glow.style.left = currentX + 'px';
+                glow.style.top = currentY + 'px';
+                requestAnimationFrame(updateGlow);
+            }
+            updateGlow();
+        })();
+
+        // ===== NAVBAR SCROLL =====
+        (function() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        })();
+
+        // ===== MOBILE MENU =====
+        (function() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const links = document.getElementById('navLinks');
+            btn.addEventListener('click', () => {
+                links.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    links.classList.remove('active');
+                });
+            });
+        })();
+
+        // ===== SCROLL REVEAL =====
+        (function() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            reveals.forEach(el => observer.observe(el));
+        })();
+
+        // ===== TESTIMONIAL SLIDER =====
+        (function() {
+            const track = document.getElementById('testimonialTrack');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            let currentSlide = 0;
+            const totalSlides = 4;
+
+            function goToSlide(index) {
+                currentSlide = index;
+                track.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => goToSlide(i));
+            });
+
+            setInterval(() => {
+                goToSlide((currentSlide + 1) % totalSlides);
+            }, 6000);
+        })();
+
+        // ===== CONSULTATION CHECKOUT =====
+        (function() {
+            // Restore pending state from localStorage on load
+            const pending = JSON.parse(localStorage.getItem('wfp_consult_pending') || 'null');
+            if (pending && pending.status === 'pending') {
+                document.getElementById('consult-step1').style.display = 'none';
+                document.getElementById('consult-step3').style.display = 'block';
+                document.getElementById('pending-details').innerHTML =
+                    `<strong>${pending.name}</strong><br>${pending.email}<br><br><strong>${pending.label}</strong><br>₦${Number(pending.amount).toLocaleString()}<br><br>Submitted: ${pending.date}`;
+            }
+
+            // Rotate account every 60 min based on timestamp
+            function getActiveAccount() {
+                const accs = [
+                    {num:'1873473175', bank:'Access Bank', name:'OLUWAPELUMI ENIOLA AZEEZ'},
+                    {num:'1829414043', bank:'Access Bank', name:'OLUWAPELUMI ENIOLA AZEEZ'},
+                    {num:'1829391791', bank:'Access Bank', name:'OLUWAPELUMI ENIOLA AZEEZ'}
+                ];
+                const idx = Math.floor(Date.now() / (1000*60*60)) % accs.length;
+                return accs[idx];
+            }
+            window._getActiveAccount = getActiveAccount;
+        })();
+
+        window.consultProceed = function() {
+            const radio = document.querySelector('input[name="platform"]:checked');
+            if (!radio) { alert('Please select a platform first.'); return; }
+            const name = document.getElementById('consult-name').value.trim();
+            const email = document.getElementById('consult-email').value.trim();
+            if (!name) { alert('Please enter your full name.'); return; }
+            if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+            const label = radio.closest('.consult-option').dataset.label;
+            const amount = radio.closest('.consult-option').dataset.amount;
+            window._consultData = { name, email, label, amount };
+            document.getElementById('pay-amount-display').textContent = `Pay ₦${Number(amount).toLocaleString()}`;
+            document.getElementById('pay-platform-display').textContent = label;
+            document.getElementById('pay-exact-amount').textContent = `₦${Number(amount).toLocaleString()}`;
+            const acc = window._getActiveAccount();
+            document.getElementById('pay-acc-num').textContent = acc.num;
+            document.querySelector('.pay-account-card .font-name') && (document.querySelector('.pay-account-card .font-name').textContent = acc.name);
+            document.getElementById('consult-step1').style.display = 'none';
+            document.getElementById('consult-step2').style.display = 'block';
+        };
+
+        window.consultBack = function() {
+            document.getElementById('consult-step2').style.display = 'none';
+            document.getElementById('consult-step1').style.display = 'block';
+        };
+
+        window.consultSent = function() {
+            const d = window._consultData;
+            const record = { ...d, status:'pending', date: new Date().toLocaleString() };
+            localStorage.setItem('wfp_consult_pending', JSON.stringify(record));
+            document.getElementById('consult-step2').style.display = 'none';
+            document.getElementById('consult-step3').style.display = 'block';
+            document.getElementById('pending-details').innerHTML =
+                `<strong>${d.name}</strong><br>${d.email}<br><br><strong>${d.label}</strong><br>₦${Number(d.amount).toLocaleString()}<br><br>Submitted: ${new Date().toLocaleString()}`;
+        };
+
+        window.consultCancel = function() {
+            document.getElementById('consult-step2').style.display = 'none';
+            document.getElementById('consult-step1').style.display = 'block';
+        };
+
+        window.consultReset = function() {
+            document.getElementById('consult-step3').style.display = 'none';
+            document.getElementById('consult-step1').style.display = 'block';
+        };
+
+        window.copyAccNum = function() {
+            const num = document.getElementById('pay-acc-num').textContent;
+            copyText(num, document.getElementById('copy-acc-btn'));
+        };
+
+        window.copyText = function(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const orig = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = 'rgba(212,175,55,0.3)';
+                setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 2000);
+            });
+        };
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== LIQUID CHROME (Founder Hero) =====
+        (function() {
+            const canvas = document.getElementById('liquid-chrome-canvas');
+            if (!canvas) return;
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (!gl) return;
+
+            function resize() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+                gl.viewport(0, 0, canvas.width, canvas.height);
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const vSrc = `attribute vec2 a_pos; void main(){ gl_Position = vec4(a_pos,0,1); }`;
+            const fSrc = `
+            precision highp float;
+            uniform float uTime; uniform vec2 uRes; uniform vec2 uMouse;
+            void main(){
+                vec2 uv = (2.0*gl_FragCoord.xy - uRes) / min(uRes.x,uRes.y);
+                for(float i=1.0;i<10.0;i++){
+                    uv.x += 0.3/i * cos(i*3.0*uv.y + uTime + uMouse.x*3.14159);
+                    uv.y += 0.3/i * cos(i*3.0*uv.x + uTime + uMouse.y*3.14159);
+                }
+                vec3 col = vec3(0.08,0.06,0.02) / abs(sin(uTime - uv.y - uv.x));
+                gl_FragColor = vec4(clamp(col,0.0,1.0), 1.0);
+            }`;
+
+            function mkShader(type, src) {
+                const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s;
+            }
+            const prog = gl.createProgram();
+            gl.attachShader(prog, mkShader(gl.VERTEX_SHADER, vSrc));
+            gl.attachShader(prog, mkShader(gl.FRAGMENT_SHADER, fSrc));
+            gl.linkProgram(prog); gl.useProgram(prog);
+
+            const buf = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+            const loc = gl.getAttribLocation(prog, 'a_pos');
+            gl.enableVertexAttribArray(loc);
+            gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+            const uTime = gl.getUniformLocation(prog, 'uTime');
+            const uRes  = gl.getUniformLocation(prog, 'uRes');
+            const uMouse= gl.getUniformLocation(prog, 'uMouse');
+            let mx=0.5, my=0.5;
+
+            canvas.parentElement.addEventListener('mousemove', e => {
+                const r = canvas.getBoundingClientRect();
+                mx = (e.clientX-r.left)/r.width;
+                my = 1-(e.clientY-r.top)/r.height;
+            });
+
+            function render(t) {
+                gl.uniform1f(uTime, t*0.0002*0.3);
+                gl.uniform2f(uRes, canvas.width, canvas.height);
+                gl.uniform2f(uMouse, mx, my);
+                gl.drawArrays(gl.TRIANGLES, 0, 3);
+                requestAnimationFrame(render);
+            }
+            requestAnimationFrame(render);
+        })();
+
+        // ===== VARIABLE PROXIMITY on founder name =====
+        (function() {
+            const el = document.getElementById('vp-name');
+            if (!el) return;
+            const text = el.textContent;
+            el.innerHTML = '';
+            el.style.fontFamily = "'Roboto Flex','Playfair Display',serif";
+            const spans = [...text].map(ch => {
+                const s = document.createElement('span');
+                s.textContent = ch === ' ' ? '\u00A0' : ch;
+                s.style.display = 'inline-block';
+                s.style.fontVariationSettings = "'wght' 400";
+                s.style.transition = 'font-variation-settings 0.15s ease';
+                el.appendChild(s);
+                return s;
+            });
+
+            document.addEventListener('mousemove', e => {
+                spans.forEach(s => {
+                    const r = s.getBoundingClientRect();
+                    const cx = r.left + r.width/2, cy = r.top + r.height/2;
+                    const dist = Math.hypot(e.clientX-cx, e.clientY-cy);
+                    const norm = Math.max(0, 1 - dist/180);
+                    const w = Math.round(400 + 600*norm);
+                    s.style.fontVariationSettings = `'wght' ${w}`;
+                });
+            });
+        })();
+
+        // ===== FLOATING CONSULT BUTTON VISIBILITY =====
+        (function() {
+            const btn = document.getElementById('floatConsultBtn');
+            const target = document.getElementById('contact');
+            if (!btn || !target) return;
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    btn.classList.toggle('hidden', e.isIntersecting);
+                });
+            }, { threshold: 0.15 });
+            obs.observe(target);
+        })();
+
+        // ===== GRADUAL BLUR on hero stats =====
+        (function() {
+            const container = document.getElementById('gradual-blur-stats');
+            if (!container) return;
+            const divCount = 5;
+            for (let i = 1; i <= divCount; i++) {
+                const progress = i / divCount;
+                const curved = progress * progress * (3 - 2 * progress);
+                const blurVal = (Math.pow(2, curved * 4) * 0.0625 * 2).toFixed(3);
+                const inc = 100 / divCount;
+                const p1 = ((i-1)*inc).toFixed(1), p2 = (i*inc).toFixed(1);
+                const d = document.createElement('div');
+                d.style.cssText = `position:absolute;inset:0;backdrop-filter:blur(${blurVal}rem);-webkit-backdrop-filter:blur(${blurVal}rem);mask-image:linear-gradient(to bottom,transparent ${p1}%,black ${p2}%);-webkit-mask-image:linear-gradient(to bottom,transparent ${p1}%,black ${p2}%);opacity:1;`;
+                container.appendChild(d);
+            }
+        })();
+    </script>
+</body>
+</html>
